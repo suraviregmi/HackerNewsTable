@@ -8,10 +8,11 @@ class MainPage extends Component {
   constructor() {
     super();
     this.state = {
-      data: [],
+      entries: [],
       allStories: [],
+      data: data,
 
-      displayData: [],
+      displayData: data,
       pageSize: 1,
       direction: {
         id: "asc",
@@ -30,9 +31,9 @@ class MainPage extends Component {
       "https://hacker-news.firebaseio.com/v0/topstories.json"
     );
     let result = await fetched.json();
-    this.setState({ data: result.slice(0, result.length) });
-    for (let i = 0; i < this.state.data.length; i++) {
-      this.getAllData(this.state.data[i]);
+    this.setState({ entries: result.slice(0, result.length) });
+    for (let i = 0; i < this.state.entries.length; i++) {
+      this.getAllData(this.state.entries[i]);
     }
   }
 
@@ -53,7 +54,7 @@ class MainPage extends Component {
   };
 
   sortBy = value => {
-    console.log("sort ma value", value);
+    //console.log("sort ma value", value);
 
     this.setState({
       displayData: this.state.data.sort((a, b) => {
@@ -84,12 +85,12 @@ class MainPage extends Component {
     });
 
     this.setState({
-      apiData: filteredData
+      displayData: filteredData
     });
   };
 
   render() {
-    console.log("in main page js ", this.state.allStories);
+    // console.log("in main page js ", this.state.data);
     return (
       <div className="MainPage">
         <NumberSelector getSelectValue={this.getSelectValue} />
