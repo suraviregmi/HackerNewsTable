@@ -1,0 +1,47 @@
+.table-header {
+  display: flex;
+}
+
+.table-header-item {
+  width: 200px;
+  border: 1px solid blanchedalmond;
+  background-color: azure;
+}
+
+.row {
+  display: flex;
+}
+.row-item {
+  border: 1px solid white;
+  width: 200px;
+
+  background-color: antiquewhite;
+}
+
+.title-cell {
+  width: 300px;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  font-weight: 900;
+  padding: 0 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 5px;
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+
+.ascending {
+  transform: rotate(180deg);
+}
+.descending {
+  transform: rotate(0deg);
+}
