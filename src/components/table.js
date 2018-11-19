@@ -9,13 +9,14 @@ class MainTable extends Component {
   }
 
   render() {
-    // console.log("in table row ", this.props);
+    console.log("in table row ", this.props.direction);
     return (
-      <div>
+      <div className="Table-Container">
         <div>
           <TableCell
             columns={Object.keys(this.props.singleData)}
             className="table-header-item"
+            direction={this.props.direction}
             handelBtnClick={this.props.handelBtnClick}
             search={this.props.search}
           />

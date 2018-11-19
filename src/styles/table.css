@@ -39,9 +39,15 @@ button:focus {
   outline: 0;
 }
 
-.ascending {
+.asc {
   transform: rotate(180deg);
+
+  background-color: lightgreen;
 }
-.descending {
+.desc {
   transform: rotate(0deg);
+}
+
+.Table-Container {
+  overflow: scroll;
 }

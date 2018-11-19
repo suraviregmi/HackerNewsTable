@@ -5,6 +5,7 @@ const Button = ({
   handelBtnClick = f => f,
   content,
   className,
+  direction,
   ...props
 }) => (
   <button className={className} onClick={() => handelBtnClick(id)}>

@@ -123,8 +123,15 @@ class MainPage extends Component {
       displayData: data.slice(upperLimit - this.state.pageSize, upperLimit)
     });
   };
+  sortData = data => {
+    return data.slice(0, 5);
+  };
 
   render() {
+    // const sortedData = this.sortData(this.state.data);
+    // console.log("sorted DAta", sortedData);
+    // const sortedData = this.sortBy(value,  this.state.data);
+    //const searchData = this.search('name', this.state.query, sortedData);
     // console.log("all Stories", this.state.data);
     return (
       <div>
@@ -136,7 +143,9 @@ class MainPage extends Component {
             noOfPages={this.state.noOfPages}
             handelBtnClick={this.paginationBtnClick}
           />
+
           <MainTable
+            direction={this.state.direction}
             handelBtnClick={this.sortBy}
             data={this.state.displayData}
             pageSize={this.state.pageSize}

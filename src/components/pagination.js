@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 
 class Pagination extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     let a = [];
     for (let i = 1; i <= this.props.noOfPages; i++) {
       if (i === this.props.currentPage) {
-        console.log("current page is ", i);
+        // console.log("current page is ", i);
         a.push(
           <Button
             content={i}

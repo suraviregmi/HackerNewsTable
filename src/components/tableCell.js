@@ -7,12 +7,13 @@ import propTypes from "prop-types";
 const TableCell = ({
   columns,
   className,
+  direction,
   handelBtnClick = f => f,
   ...props
 }) => (
   <div className="row">
     {columns.map((col, index) => {
-      // console.log("cl and index ", props);
+      // console.log("cl and index ", direction[col]);
       return (
         <div key={index} className={className}>
           <p>{(HeaderInfo[col] && HeaderInfo[col].label) || col}</p>
@@ -21,7 +22,7 @@ const TableCell = ({
               handelBtnClick={handelBtnClick}
               id={col}
               content={"^"}
-              className="ascending"
+              className={direction[col]}
             />
           )}
 
