@@ -3,7 +3,7 @@
 }
 
 .table-header-item {
-  width: 200px;
+  min-width: 100px;
   border: 1px solid blanchedalmond;
   background-color: azure;
 }
@@ -11,9 +11,9 @@
 .row {
   display: flex;
 }
-.row-item {
+.table-body-item {
   border: 1px solid white;
-  width: 200px;
+  min-width: 100px;
 
   background-color: antiquewhite;
 }

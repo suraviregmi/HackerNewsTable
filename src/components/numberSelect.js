@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import propTypes from "prop-types";
 
-const ten = 1,
-  twenty = 3,
-  thirty = 5;
+const ten = 2,
+  twenty = 6,
+  thirty = 8;
 
 class NumberSelector extends Component {
   constructor() {
@@ -36,4 +37,7 @@ class NumberSelector extends Component {
   }
 }
 
+NumberSelector.propTypes = {
+  getSelectValue: propTypes.func
+};
 export default NumberSelector;

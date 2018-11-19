@@ -1,28 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
+import propTypes from "prop-types";
+const Button = ({
+  id,
+  handelBtnClick = f => f,
+  content,
+  className,
+  ...props
+}) => (
+  <button className={className} onClick={() => handelBtnClick(id)}>
+    {content && <span>{content}</span>}
+  </button>
+);
 
-class Button extends Component {
-  constructor() {
-    super();
-    this.state = {
-      up: true
-    };
-  }
-  changeClassName = () => {
-    this.setState({ up: !this.state.up });
-  };
-  render() {
-    return (
-      <button
-        className={this.state.up ? "ascending" : "descending"}
-        onClick={e => {
-          this.changeClassName();
-          return this.props.sortBy(this.props.col, e);
-        }}
-      >
-        ^
-      </button>
-    );
-  }
-}
+Button.propTypes = {
+  className: propTypes.string,
+  id: propTypes.oneOfType([propTypes.string, propTypes.number]),
+  handelBtnClick: propTypes.func
+};
 
 export default Button;

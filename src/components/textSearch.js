@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import propTypes from "prop-types";
 
 class TextSearch extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class TextSearch extends Component {
     );
   };
   render() {
+    //console.log("in tejt safdgsfhgg", this.props);
     return (
       <form>
         <input
@@ -30,5 +32,10 @@ class TextSearch extends Component {
     );
   }
 }
+
+TextSearch.propTypes = {
+  col: propTypes.string,
+  search: propTypes.func
+};
 
 export default TextSearch;

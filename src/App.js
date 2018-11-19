@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import "./styles/table.css";
+import "./styles/pagination.css";
 import MainPage from "./views/mainPage";
 
 class App extends Component {
